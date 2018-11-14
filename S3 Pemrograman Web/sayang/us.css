@@ -1,0 +1,46 @@
+
+/*bagian header*/
+.wrap .header{
+	background: red;
+	/*height: 50px;*/
+	padding: 2px 10px;
+}
+ 
+/*akhir header*/
+ 
+/*bagian menu*/
+.wrap .menu{
+	background: yellow;
+}
+ 
+.wrap .menu ul{
+	padding: 0;
+	margin: 0;
+	background: yellow;
+	overflow: hidden;
+}
+ 
+.wrap .menu ul li{
+	float: left;
+	list-style-type: none;
+	padding: 10px;
+}
+/*akhir menu*/
+ 
+.clear{
+	clear: both;
+}
+ 
+ 
+.wrap .content{
+	background: pink;
+	float: left;
+	height: 100%;
+	width: 100%;	
+}
+ 
+.wrap .footer{
+	background: yellow;
+	width: 100%;
+	padding: 3px;
+}

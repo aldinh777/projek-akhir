@@ -12,6 +12,7 @@ Semua bug tetap dibiarkan sebagaimana mestinya, untuk mengenang betapa noob nya 
 	- **the miracle of GOTOXY**
 
 -> Program tentang sekolah, memiliki data siswa dan guru berbasis array yang built in (diisi oleh Abdul Haris)
+
 -> Terdapat form registrasi untuk siswa maupun guru dan memiliki batas maximal 3 orang
 
 ### Semester 2 Struktur Data
@@ -23,6 +24,7 @@ Semua bug tetap dibiarkan sebagaimana mestinya, untuk mengenang betapa noob nya 
 	- **Friyan Ardi Kusuma**
 
 -> Program jahad yang saling mengadu peliharaan demi kesenangan (Plagiat Pokemon)
+
 -> Admin yang punya Unlimited Money
 
 ### Semester 3 Pemrograman Berbasis Objek
@@ -35,7 +37,9 @@ Semua bug tetap dibiarkan sebagaimana mestinya, untuk mengenang betapa noob nya 
 	- **Tutorialspoint**
 
 -> Program bertema black market, yang penggunanya anonymous
+
 -> Menjual barang apa saja dari yang halal sampai yang haram
+
 -> Username nya "admin", Passwornya "modulgundul"
 
 ### Semester 3 Basis Data
@@ -48,6 +52,7 @@ Semua bug tetap dibiarkan sebagaimana mestinya, untuk mengenang betapa noob nya 
 	- **Ponpes Al-arsyadi (Inspirasi)**
 
 -> Database yang menyimpan data yang berhubungan dengan panti asuhan
+
 -> Panti asuhan yang sekaligus mondok
 
 ### Semester 3 Pemrograman Web
@@ -100,6 +105,9 @@ Semua bug tetap dibiarkan sebagaimana mestinya, untuk mengenang betapa noob nya 
 	- **Maul Lagi...**
 
 -> Awalnya mau bikin sudoku, tapi banyak errornya, bahasa prolog gak canggih
+
 -> Jadi ganti konsep game, jadinya game **Ular Tangga**
+
 -> Ada Ularnya, dan ada tangganya
+
 -> Dan ada maul lagi seingatku

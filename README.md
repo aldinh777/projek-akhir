@@ -32,7 +32,7 @@ Semua bug tetap dibiarkan sebagaimana mestinya, untuk mengenang betapa noob nya 
 - Bahasa : Java
 - IDE : Netbeans
 - Honorable Mention : 
-	- **Rekan kelas lain yang mungkin sengaja kulupakan**
+	- **Rekan kelas lain yang mungkin sengaja kulupakan karena beda kelas**
 	- **Kak Yusri yang ACC in**
 	- **Tutorialspoint**
 
@@ -47,7 +47,7 @@ Semua bug tetap dibiarkan sebagaimana mestinya, untuk mengenang betapa noob nya 
 - Database : Oracle
 - Tools : Oracle Data Modeller
 - Honorable Mention :
-	- Arief Ardi Pratama...
+	- **Arief Ardi Pratama...**
 	- **Raihan Ramadhan**
 	- **Ponpes Al-arsyadi (Inspirasi)**
 
@@ -73,6 +73,7 @@ Semua bug tetap dibiarkan sebagaimana mestinya, untuk mengenang betapa noob nya 
 - Database : Mysql
 - Honorable Mention :
 	- **Achmad Mughni Ilmi**
+	- **Rifki Ganteng (Password Admin)**
 
 -> Program kasir minimarket, sangat colorfull dan berkelas, terima kasih kepada desainer kita **Mughni Ilmi**, kalau mau desain bagus datangi dia aja tapi jangan lupa bawa budget, **desain itu tidak murah**
 

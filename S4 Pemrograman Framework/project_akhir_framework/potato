@@ -1,0 +1,131 @@
+<?php
+
+function recurse_copy($src, $dst, $models = false) {
+    $dir = opendir($src);
+    @mkdir($dst);
+    while(false !== ( $file = readdir($dir)) ) {
+        if (( $file != '.' ) && ( $file != '..' )) {
+            if ( is_dir($src . '/' . $file) ) {
+				if ($models) {
+					continue;
+				}
+                recurse_copy($src . '/' . $file,$dst . '/' . $file);
+            }
+            else {
+                copy($src . '/' . $file,$dst . '/' . $file);
+            }
+        }
+    }
+    closedir($dir);
+}
+
+function recurse_rem($src, $models = false) {
+    $dir = opendir($src);
+    while(false !== ( $file = readdir($dir)) ) {
+        if (( $file != '.' ) && ( $file != '..' )) {
+            if ( is_dir($src . '/' . $file) ) {
+				if ($models) {
+					continue;
+				}
+                recurse_rem($src . '/' . $file);
+            }
+            else {
+                unlink($src . '/' . $file);
+            }
+        }
+    }
+    closedir($dir);
+	if(!$models){
+		rmdir($src);
+	}
+}
+
+function args_potato($command, $argument) {
+	global $argv;
+	return($argv[0] == $command && $argv[1] == $argument);
+}
+
+function head_potatoes() {
+	print("
+                      !!! BEHOLD MY LORD !!!
+          NOW TASTE THIS 'LARAVEL' FRAMEWORK WITH 'POTATOES'
+                    !!! HWAHAHAHAHAHAHAHAH !!!
+
+	");
+}
+
+function install_potatoes() {
+	if(!mkdir('potatoes')) {
+		exit();
+	}
+	pull_potatoes();
+	$artisan = fopen('artisan', 'r+');
+	$potato = "\nrequire('potato');\n";
+	$top_artisan = "";
+	$bot_artisan = "";
+	while(true){
+		$line = fgets($artisan);
+		$top_artisan = $top_artisan.$line;
+		if($line == "<?php\n" || $line == '') {
+			break;
+		}
+	}
+	while(true){
+		$line = fgets($artisan);
+		$bot_artisan = $bot_artisan.$line;
+		if($line == ''){
+			break;
+		}
+	}
+	fclose($artisan);
+	$artisan = fopen('artisan', 'w+');
+	fwrite($artisan, $top_artisan.$potato.$bot_artisan);
+	fclose($artisan);
+	echo("Potato Successfully Installed to Artisan\n");
+}
+
+function push_potatoes($silent = false){
+	recurse_rem('app/Http/Controllers');
+	recurse_rem('database/migrations');
+	recurse_rem('app', true);
+	recurse_rem('public');
+	recurse_rem('resources/views');
+	recurse_copy('potatoes/middleware', 'app/Http/Middleware');
+	recurse_copy('potatoes/controllers', 'app/Http/Controllers');
+	recurse_copy('potatoes/migrations', 'database/migrations');
+	recurse_copy('potatoes/models', 'app');
+	recurse_copy('potatoes/public', 'public');
+	recurse_copy('potatoes/views', 'resources/views');
+	copy('potatoes/routes.php', 'routes/web.php');
+	if(!$silent){
+		echo("Push Complete\n");
+	}
+}
+
+function pull_potatoes(){
+	recurse_rem('potatoes');
+	mkdir('potatoes');
+	recurse_copy('app', 'potatoes/models', true);
+	recurse_copy('resources/views', 'potatoes/views');
+	recurse_copy('app/Http/Controllers', 'potatoes/controllers');
+	recurse_copy('app/Http/Middleware', 'potatoes/middleware');
+	recurse_copy('database/migrations', 'potatoes/migrations');
+	recurse_copy('public', 'potatoes/public');
+	copy('routes/web.php', 'potatoes/routes.php');
+	echo("Pull Complete\n");
+}
+
+if (isset($argv[1])) {
+	if ( args_potato('potato', 'install') ) {
+		install_potatoes();
+	}
+	elseif ( args_potato('potato', 'push') ) {
+		push_potatoes();
+	}
+	elseif ( args_potato('potato', 'pull') ) {
+		pull_potatoes();
+	}
+	elseif ( args_potato('artisan', 'serve') ) {
+		head_potatoes();
+	}
+}
